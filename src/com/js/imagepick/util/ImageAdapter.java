@@ -56,6 +56,7 @@ public class ImageAdapter extends BaseAdapter {
 		// TODO Auto-generated method stub
 		final ViewHolder viewHolder;
 
+		// 如果没有convertView则从xml生成新的，否则用缓存中的提升效率
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.item_gridview, parent,
 					false);
@@ -70,11 +71,12 @@ public class ImageAdapter extends BaseAdapter {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		
-		// 重置状态
+		// 重置状态，例如如果图片从网络加载那么网速比较慢的时候先显示一个图片等图片下载完成再显示下载图片
 		viewHolder.mImg.setImageResource(R.drawable.pictures_no);
 		viewHolder.mSelect.setImageResource(R.drawable.pictures_unselected);
 		viewHolder.mImg.setColorFilter(null);
 
+		// 加载图片到ImageView上
 		ImageLoader.getInstance(3, Type.LIFO).loadImage(
 				mDirPath + "/" + mImgPaths.get(position), viewHolder.mImg);
 		final String filePath = mDirPath+"/"+mImgPaths.get(position);
@@ -98,6 +100,7 @@ public class ImageAdapter extends BaseAdapter {
 			}
 		});
 		
+		// 图片勾选状态的加载
 		if(mSelectedImg.contains(filePath)) {
 			viewHolder.mImg.setColorFilter(Color.parseColor("#77000000"));
 			viewHolder.mSelect.setImageResource(R.drawable.pictures_selsectd);

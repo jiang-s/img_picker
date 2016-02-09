@@ -8,6 +8,10 @@
 package com.js.imagepick;
 
 public final class R {
+    public static final class anim {
+        public static final int slide_down=0x7f040000;
+        public static final int slide_up=0x7f040001;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -18,8 +22,8 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int dir_choose=0x7f020000;
@@ -31,32 +35,41 @@ public final class R {
         public static final int trunk=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f070006;
-        public static final int id_bottom_layout=0x7f070001;
-        public static final int id_dir_count=0x7f070003;
-        public static final int id_dir_name=0x7f070002;
-        public static final int id_gridView=0x7f070000;
-        public static final int id_item_image=0x7f070004;
-        public static final int id_item_select=0x7f070005;
+        public static final int action_settings=0x7f09000a;
+        public static final int id_bottom_layout=0x7f090001;
+        public static final int id_dir_count=0x7f090003;
+        public static final int id_dir_item_count=0x7f090008;
+        public static final int id_dir_item_name=0x7f090007;
+        public static final int id_dir_name=0x7f090002;
+        public static final int id_gridView=0x7f090000;
+        public static final int id_id_dir_item_image=0x7f090006;
+        public static final int id_item_image=0x7f090004;
+        public static final int id_item_select=0x7f090005;
+        public static final int id_list_dir=0x7f090009;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int item_gridview=0x7f030001;
+        public static final int item_popup_main=0x7f030002;
+        public static final int popup_main=0x7f030003;
     }
     public static final class menu {
-        public static final int main=0x7f060000;
+        public static final int main=0x7f080000;
     }
     public static final class string {
-        public static final int action_settings=0x7f050002;
-        public static final int app_name=0x7f050000;
-        public static final int circle=0x7f050004;
-        public static final int hello=0x7f050003;
-        public static final int hello_world=0x7f050001;
-        public static final int oval=0x7f050008;
-        public static final int pentagon=0x7f05000a;
-        public static final int rect=0x7f050006;
-        public static final int round_rect=0x7f050007;
-        public static final int square=0x7f050005;
-        public static final int triangle=0x7f050009;
+        public static final int action_settings=0x7f060002;
+        public static final int app_name=0x7f060000;
+        public static final int circle=0x7f060004;
+        public static final int hello=0x7f060003;
+        public static final int hello_world=0x7f060001;
+        public static final int oval=0x7f060008;
+        public static final int pentagon=0x7f06000a;
+        public static final int rect=0x7f060006;
+        public static final int round_rect=0x7f060007;
+        public static final int square=0x7f060005;
+        public static final int triangle=0x7f060009;
+    }
+    public static final class style {
+        public static final int dir_popupwindow_anim=0x7f070000;
     }
 }

@@ -119,7 +119,7 @@ public class ImageLoader {
 		return null;
 	}
 	
-	private static ImageLoader getInstance() {
+	public static ImageLoader getInstance() {
 		if(mInstance == null) {
 			synchronized (ImageLoader.class) {
 				if(mInstance == null) {

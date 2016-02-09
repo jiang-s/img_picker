@@ -1,6 +1,6 @@
 package com.js.imagepick.bean;
 
-public class FolderBean {
+public class FolderBean implements Comparable<FolderBean>{
 
 	private String dir;
 	private String firstImgPath;
@@ -12,8 +12,8 @@ public class FolderBean {
 	public void setDir(String dir) {
 		this.dir = dir;
 		
-		int lastIndexOf = this.dir.indexOf("/");
-		this.name = this.dir.substring(lastIndexOf);
+		int lastIndexOf = this.dir.lastIndexOf("/");
+		this.name = this.dir.substring(lastIndexOf+1);
 	}
 	public String getFirstImgPath() {
 		return firstImgPath;
@@ -29,5 +29,10 @@ public class FolderBean {
 	}
 	public void setCount(int count) {
 		this.count = count;
+	}
+	@Override
+	public int compareTo(FolderBean another) {
+		// TODO Auto-generated method stub
+		return this.getName().compareTo(another.getName());
 	}
 }
